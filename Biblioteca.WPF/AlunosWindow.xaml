@@ -1,0 +1,22 @@
+﻿<metro:MetroWindow x:Class="Biblioteca.WPF.AlunosWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Cadastro de Alunos" Name="Form_Cadastro_Aluno" Height="450" Width="800" WindowStartupLocation="CenterScreen" IsMaxRestoreButtonEnabled="False">
+    <Grid>       
+        <Button Name="btnNovo" Content="Novo Aluno" Background="#FF246CD4" Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Width="107" Click="BtnNovo_Click"/>
+        <Button Name="btnEditar" IsEnabled="False" Content="Editar Aluno" Margin="112,0,0,0" Background="#FF26B80F" Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Width="107" Click="BtnEditar_Click" />
+        <Button Name="btnDeletar" IsEnabled="False" Content="Deletar Aluno" Margin="224,0,0,0" Background="#FFF50C0C" Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Width="109" Click="BtnDeletar_Click" />
+        <DataGrid x:FieldModifier="public" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" Name="myDataGrid" Margin="0,58,0,0" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id do Aluno" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Nome do Aluno" Binding="{Binding Nome}"/>
+                <DataGridTextColumn Header="CPF do Aluno" Binding="{Binding CPF}"/>
+                <DataGridTextColumn Header="Data Matrícula" Binding="{Binding DataMatricula, StringFormat='{}{0:dd/MM/yyyy h:mm tt}'}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</metro:MetroWindow>

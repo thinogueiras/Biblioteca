@@ -1,0 +1,38 @@
+﻿<metro:MetroWindow x:Class="Biblioteca.WPF.LivroEditarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Edição de Livros" Height="650" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Nome do livro" VerticalContentAlignment="Bottom" FontSize="18" FontFamily="Arial Black"/>
+        <Label Content="Autor" VerticalContentAlignment="Bottom" FontSize="18" FontFamily="Arial Black" Grid.Row="2"/>
+        <Label Content="Editora" VerticalContentAlignment="Bottom" FontSize="18" FontFamily="Arial Black" Grid.Row="4"/>
+        <Label Content="Ano Publicação" VerticalContentAlignment="Bottom" FontSize="18" FontFamily="Arial Black" Grid.Row="6"/>
+        <Label Content="Qtd. Exemplares" VerticalContentAlignment="Bottom" FontSize="18" FontFamily="Arial Black" Grid.Row="8"/>
+        <TextBox Name="txtNome" MaxLength="200" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Padding="10 10 0 10" FontSize="18"/>
+        <TextBox Name="txtAutor" MaxLength="200" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Padding="10 10 0 10" FontSize="18"/>
+        <TextBox Name="txtEditora" MaxLength="200" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Padding="10 10 0 10" FontSize="18"/>
+        <TextBox Name="txtAnoPublicacao" MaxLength="200" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Padding="10 10 0 10" FontSize="18"/>
+        <TextBox Name="txtQtdExemplares" MaxLength="200" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Top" Padding="10 10 0 10" FontSize="18"/>
+        <Button Content="Salvar" IsDefault="True" Grid.Row="11" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="18" Background="#FF246CD4"
+                Foreground="White" Margin="10" Click="Button_Click"/>
+        <Button Content="Cancelar" IsCancel="True" Grid.Row="11" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="18" Background="#FFF9780C"
+                Foreground="White" Margin="10"/>
+    </Grid>
+</metro:MetroWindow>

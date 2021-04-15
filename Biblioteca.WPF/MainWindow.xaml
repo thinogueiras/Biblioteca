@@ -1,0 +1,28 @@
+﻿<metro:MetroWindow x:Class="Biblioteca.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Biblioteca.WPF"
+        xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Sistema de Gestão Bibliotecário" Name="Form_Principal" Height="450" Width="800" WindowState="Maximized" IsMaxRestoreButtonEnabled="False" IsMinButtonEnabled="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Menu HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2">
+            <MenuItem Header="Cadastro">
+                <MenuItem Name="btnAluno" Header="Cadastro de Alunos" Click="BtnAluno_Click"/>
+                <MenuItem Name="btnLivro" Header="Cadastro de Livros" Click="BtnLivro_Click"/>
+                <MenuItem Name="btnSair" Header="Sair" Click="BtnSair_Click"/>
+            </MenuItem>
+            <MenuItem Name="btnEmprestimo" Header="Empréstimos" Click="BtnEmprestimo_Click"/>
+            <MenuItem Name="btnInadimplente" Header="Inadimplentes" Click="BtnInadimplente_Click"/>
+            <MenuItem Header="Editar"/>
+            <MenuItem Header="Sobre"/>
+        </Menu>
+        <Image Grid.ColumnSpan="2" Source="Imagens/biblioteca.jpg" HorizontalAlignment="Stretch" Height="387" VerticalAlignment="Bottom"/>
+    </Grid>
+</metro:MetroWindow>
